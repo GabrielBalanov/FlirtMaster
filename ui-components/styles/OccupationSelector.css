@@ -1,0 +1,86 @@
+.occupation-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.occupation-display {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  border: 1px solid #5c80d8;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.occupation-display.has-value {
+  background: linear-gradient(to right, #cbfdf2, #02c18d);
+  color: #0e274d;
+  font-weight: 500;
+}
+
+.occupation-options-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: #1a1e29;
+  border: 1px solid #5c80d8;
+  border-radius: 12px;
+  max-height: calc(5 * 2.5rem);
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.occupation-option {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.occupation-option:hover {
+  background-color: rgba(92, 128, 216, 0.1);
+}
+
+.occupation-option.selected {
+  background: linear-gradient(to right, #cbfdf2, #02c18d);
+  color: #0e274d;
+  font-weight: 500;
+}
+
+/* Scrollbar styling */
+.occupation-options-dropdown {
+  scrollbar-width: auto;
+  scrollbar-color: #02c18d #1a1e29;
+}
+
+.occupation-options-dropdown::-webkit-scrollbar {
+  width: 24px;
+  background-color: #1a1e29;
+  border-radius: 12px;
+}
+
+.occupation-options-dropdown::-webkit-scrollbar-track {
+  background: #1a1e29;
+  border-radius: 12px;
+  margin: 4px 0;
+}
+
+.occupation-options-dropdown::-webkit-scrollbar-thumb {
+  background: #02c18d;
+  border-radius: 12px;
+  border: 4px solid #1a1e29;
+  min-height: 40px;
+}
+
+.occupation-options-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #00a077;
+}
