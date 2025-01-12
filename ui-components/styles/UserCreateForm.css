@@ -1,0 +1,23 @@
+/* @media screen and (max-width: 480px) {
+    #root{
+      width: 75% !important;
+    }
+    [data-amplify-authenticator] [data-amplify-form]{
+      padding: 0px !important;
+    }
+  
+    .data-amplify-container{
+      margin: 0 !important;
+      padding: 0 !important;
+      max-width: 80% !important;
+      width: 80%;
+    }
+  
+    [data-amplify-authenticator] [data-amplify-container]{
+      width: 100% !important;
+    }
+  
+    .amplify-tabs__list--equal{
+      padding: 0px !important;
+    }
+  } */

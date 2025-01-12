@@ -1,0 +1,338 @@
+:has(> #root) {
+  background: linear-gradient(to top, #2f427a, #1a1d28);
+}
+
+#root{
+  max-width: 860px !important;
+}
+
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  position: relative;
+  min-height: 80px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.flirtmaster-logo {
+  height: 24px;
+  width: auto;
+}
+
+.dashboard-status-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Menu Title Styles */
+.menu-title-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.menu-line-with-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.line {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.camera-button{
+  border-radius: 50px;
+  background: linear-gradient(to right, #a6f2de, #00c88f) !important;
+}
+
+.settings-button{
+  border-radius: 50px;
+  background-color: #d5d5d6 !important;
+}
+
+.menu-title {
+  color: #a4d4cb;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0 16px;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Notification Bubble */
+.notification-bubble {
+  background: rgba(255, 255, 240, 0.95);
+  padding: 16px 40px 16px 16px;
+  border-radius: 8px;
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 500px;
+  align-self: center;
+}
+
+.notification-bubble p {
+  margin: 0;
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #4a90e2;
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+}
+
+/* Section Title Container */
+.section-title-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  color: #cdebf3;
+  white-space: nowrap;
+  padding: 0 16px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+.upload-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.25s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.upload-button {
+  background: linear-gradient(to right, #cbfdf2, #02c18d);
+  color: #0e274d;
+}
+
+.upload-button:hover,
+.pickup-line-button:hover {
+  opacity: 0.9;
+}
+
+/* Style Selection Buttons */
+.style-buttons {
+  display: flex;
+  gap: 8px; /* Adjust gap to fit within 400px */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px; /* Ensure the total width does not exceed 400px */
+  margin-bottom: 16px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.style-button {
+  background-color: #5c80d8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex: 1; /* Distribute space equally among buttons */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 0; /* Allow buttons to shrink if needed */
+}
+
+.style-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .style-buttons {
+    justify-content: flex-start; /* Align buttons to the start */
+  }
+}
+
+.emoji {
+  font-size: 1.2em;
+}
+
+/* Back Button */
+.back-button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: white !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.blue-wide-button{
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.25s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(to top, #adbce7, #4862ab);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 16px;
+  }
+  
+  .menu-line-with-icons {
+    gap: 8px;
+  }
+  
+  .section-title-container {
+    gap: 8px;
+  }
+
+  .style-buttons {
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .style-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #root{
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .dashboard-status-indicators {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+
+  .upload-button,
+  .blue-wide-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Add this to your existing Dashboard.css */
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .answers-container {
+    padding: 0 12px;
+  }
+}

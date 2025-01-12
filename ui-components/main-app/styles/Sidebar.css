@@ -1,0 +1,234 @@
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 998;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile styles (default) */
+.sidebar {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #1a1e29;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    transition: bottom 0.3s ease;
+    z-index: 999;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    bottom: 0;
+    background: #2f427a;
+}
+
+/* Desktop styles (screens wider than 860px) */
+@media screen and (min-width: 860px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -400px; /* Width of the sidebar */
+        height: 100vh; /* Full viewport height */
+        width: 400px;
+        max-height: none; /* Remove max-height constraint */
+        margin: 0;
+        border-radius: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: left 0.3s ease;
+        padding: 20px;
+    }
+
+    .sidebar.active {
+        left: 0;
+        bottom: 0;
+    }
+}
+
+/* Rest of your existing sidebar styles remain unchanged */
+.profile-section {
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile-info {
+    display: flex;
+    gap: 16px;
+}
+
+.profile-avatar {
+    width: 48px;
+    height: 48px;
+    background: #d6d6d4;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-info {
+    margin-top: 12px;
+}
+
+.email-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.membership-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #02c18d;
+    border-radius: 50%;
+}
+
+.profile-text h2 {
+    color: white;
+    font-size: 18px;
+    margin: 0 0 4px 0;
+}
+
+.profile-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.join-date, .email {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.membership-status {
+    color: #02c18d;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #9baee6;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    text-align: left;
+    font-weight: 900;
+}
+
+.menu-icon-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #2a3c6a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.menu-button:hover {
+    background: rgba(173, 216, 230, 0.2);
+}
+
+.logout-button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to right, #cbfdf2, #02c18d);
+    border: none;
+    border-radius: 12px;
+    color: #1a1e29;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: opacity 0.2s ease;
+}
+
+.logout-button:hover {
+    opacity: 0.9;
+}
+
+.close-sidebar-button {
+    background-color: #d7d7d8;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+    width: 36px; /* Match the settings button size */
+    height: 36px; /* Match the settings button size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Ensure it's circular */
+    transition: background-color 0.2s ease;
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

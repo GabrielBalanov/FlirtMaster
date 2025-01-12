@@ -1,5 +1,6 @@
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import UserCreateForm from '../ui-components/UserCreateForm';
+//import UserCreateForm from '../ui-components/UserCreateForm';
+import Dashboard from '../ui-components/main-app/Dashboard';
 
 function App() {
   const { authStatus } = useAuthenticator();
@@ -10,7 +11,8 @@ function App() {
   }
 
   return (
-    <UserCreateForm />
+    //<UserCreateForm />
+    <Dashboard/>
   );
 }
 

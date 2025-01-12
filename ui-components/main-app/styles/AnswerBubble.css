@@ -1,0 +1,41 @@
+.answer-bubble {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answer-text {
+  margin: 0;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.4;
+  flex-grow: 1;
+  padding-right: 16px;
+}
+
+.copy-button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: #5c80d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.copy-button:hover {
+  color: #02c18d;
+}
+
+.copy-button svg {
+  width: 20px;
+  height: 20px;
+}

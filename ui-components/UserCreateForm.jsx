@@ -19,7 +19,7 @@ const UserCreateForm = ({ onSubmit, onSuccess, onError, onValidate, onChange, cl
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
-  const totalSteps = 15;
+  const totalSteps = 14;
 
   // Function to get fields for current step
   const getFieldsForStep = (step) => {
@@ -35,9 +35,8 @@ const UserCreateForm = ({ onSubmit, onSuccess, onError, onValidate, onChange, cl
       9: ['textingSkillRating'],
       10: ['mostPopularDatingPlatform'],
       11: ['occupation'],
-      12: ['nativeTown'],
-      13: ['currentResidence'],
-      14: ['hobbies'],
+      12: ['currentResidence'],
+      13: ['hobbies'],
     };
     return stepFields[step] || [];
   };
@@ -379,17 +378,6 @@ const UserCreateForm = ({ onSubmit, onSuccess, onError, onValidate, onChange, cl
       case 12:
         return (
           <div class="form-inputs-wrapper">
-            <Text class="wizard-title" fontSize="1.5rem" fontWeight="bold">What is your home town?</Text>
-            <TextField
-              name="nativeTown"
-              value={formData.nativeTown || ''}
-              onChange={handleInputChange}
-            />
-          </div>
-        );
-      case 13:
-        return (
-          <div class="form-inputs-wrapper">
             <Text class="wizard-title" fontSize="1.5rem" fontWeight="bold">Where do you currently live?</Text>
             <TextField
               name="currentResidence"
@@ -398,7 +386,7 @@ const UserCreateForm = ({ onSubmit, onSuccess, onError, onValidate, onChange, cl
             />
           </div>
         );
-      case 14:
+      case 13:
         return (
           <div class="form-inputs-wrapper">
             <Text class="wizard-title" fontSize="1.5rem" fontWeight="bold">Select 3 to 5 hobbies</Text>

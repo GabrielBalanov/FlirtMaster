@@ -1,3 +1,7 @@
+#root{
+  width:100%
+}
+
 .amplify-field__show-password .amplify-icon {
   width: 20px !important;
   height: 20px !important;
@@ -327,34 +331,9 @@ button[data-variation="primary"].amplify-button:hover:not(:disabled) {
   padding: 34px !important;
 }
 
-/* Responsive styles for small screens */
-@media screen and (max-width: 727px) {
-  .amplify-authenticator {
-    align-items: flex-start !important;
-    padding: 40px 20px !important;
-  }
-
-  .amplify-authenticator [data-amplify-authenticator-signin="true"] {
-    padding: 1.5rem !important;
-  }
-
-  .amplify-tabs__list {
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-  }
-
-  .amplify-tabs-item {
-    min-width: 120px !important;
-  }
-
-  .amplify-tabs__list--equal {
-    padding: 20px !important;
-  }
-}
-
 @media screen and (max-width: 480px) {
   #root{
-    width: 75% !important;
+    width: 80% !important;
   }
   [data-amplify-authenticator] [data-amplify-form]{
     padding: 0px !important;
